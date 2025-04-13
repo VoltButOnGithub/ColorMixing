@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', DejaVu Sans, serif;
+}
+
+
+body {
+
+}
+
+[draggable="true"]:hover {
+    border-color: black;
+}
+
+.draghover {
+    border-color: black;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+.draghover {
+    border-color: black;
+}
+
+.main {
+    margin: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-items: center;
+}
+
+hr {
+    border: 3px solid gray;
+}
+
+.input, .output, .mixing,  .weather, .color-test {
+    width: 37%;
+    height: auto;
+    align-content: space-between;
+    border: 3px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.weather {
+    width: 25%;
+}
+
+.input {
+    width: 25%;
+}
+
+.wet p {
+    text-shadow: blue 0 0 2px,
+                lightskyblue 0 0 5px;
+}
+
+.cold p {
+    background: linear-gradient(#ffffff, #78ceff);
+}
+
+.hot {
+    border-color: firebrick;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 3px solid gray;
+    border-radius: 5px;
+    z-index: 6;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow: auto;
+}
+

@@ -1,0 +1,40 @@
+.color-form {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 5px 10px 0 10px;
+}
+
+.form-group {
+    display: flex;
+}
+
+input, select {
+    border: 3px solid lightgray;
+    border-radius: 4px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 5px;
+}
+
+input[type="number"] {
+    direction: rtl;
+}
+
+input:focus, select:focus {
+    border: 3px solid gray;
+}
+
+input:hover, select:hover {
+    border: 3px solid black;
+}

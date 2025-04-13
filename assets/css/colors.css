@@ -1,0 +1,64 @@
+.color-preview {
+    height: 100px;
+    margin: 10px;
+    border: 3px solid lightgray;
+}
+
+.color {
+    border: 3px solid lightgray;
+    min-width: 100px;
+    height: 100px;
+    min-height: 50px;
+    display: flex;
+    border-radius: 5px;
+    margin: 3px;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    background-color: gray;
+}
+
+.color:hover {
+    border: 3px solid black;
+}
+
+.color-hex {
+    text-align: center;
+    background-color: white;
+    padding: 3px;
+    margin: 0;
+}
+
+.mix-speed {
+    width: 60px;
+    background-color: white;
+    font-size: 12px;
+    text-align: center;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    margin: 0;
+}
+
+.smooth-hex {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.slimy-hex {
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+}
+
+.grainy-hex {
+    border: 2px solid dimgray;
+    border-radius: 3px;
+}
+
+.coarse {
+    border-radius: 1px;
+}
+
+.coarse-hex {
+    border: 2px solid black;
+    border-radius: 1px;
+}

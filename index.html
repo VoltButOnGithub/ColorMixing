@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color mixing</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+<main class="main col">
+    <div class="row">
+        <div class="input">
+            <div id="color-preview" class="color-preview"></div>
+            <form id="color-form" class="color-form">
+                <div class="form-group space-between">
+                    <div class="row center">
+                        <label for="hex"></label>
+                        <input type="text" id="hex" name="hex" value="#ff0000">
+                        <button type="button" id="hex-copy" class="icon-button">
+                            <img src="assets/images/document-duplicate.svg" alt="copy">
+                        </button>
+                        <button type="button" id="hex-paste" class="icon-button">
+                            <img src="assets/images/clipboard-document.svg" alt="paste">
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="slider-group">
+                        <div class="slider-section">
+                            <label for="red">R</label>
+                            <input type="range" id="red" name="red" min="0" max="1" step="0.004" value="0"
+                                   class="slider red-slider">
+                        </div>
+                        <div class="slider-section">
+                            <label for="green">G</label>
+                            <input type="range" id="green" name="green" min="0" max="1" step="0.004" value="0"
+                                   class="slider green-slider">
+                        </div>
+                        <div class="slider-section">
+                            <label for="blue">B</label>
+                            <input type="range" id="blue" name="blue" min="0" max="1" step="0.004" value="0"
+                                   class="slider blue-slider">
+                        </div>
+                    </div>
+                    <div class="slider-group">
+                        <div class="slider-section">
+                            <label for="hue">H</label>
+                            <input type="range" id="hue" name="hue" min="0" max="360" step="1" value="0"
+                                   class="slider hue-slider">
+                        </div>
+                        <div class="slider-section">
+                            <label for="saturation">S</label>
+                            <input type="range" id="saturation" name="saturation" min="0" max="1" step="0.01"
+                                   value="0"
+                                   class="slider saturation-slider">
+                        </div>
+                        <div class="slider-section">
+                            <label for="lightness">L</label>
+                            <input type="range" id="lightness" name="saturation" min="0" max="1" step="0.01"
+                                   value="0"
+                                   class="slider lightness-slider">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <div class="input-section">
+                            <label for="mixing-time">Mixing time:</label>
+                            <input type="number" id="mixing-time" name="mixing-time" min="1" max="10000" step="1"
+                                   value="5000"
+                                   required>
+                        </div>
+                        <div class="input-section">
+                            <label for="mixing-speed">Mixing speed:</label>
+                            <input type="number" id="mixing-speed" name="mixing-speed" min="1" max="10" step="1"
+                                   value="5"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-section">
+                            <label for="texture">Texture:</label>
+                            <select id="texture" name="texture"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row space-between">
+                    <button id="create-random-color-button" class="button"><img src="assets/images/plus.svg">Create
+                        random
+                    </button>
+                    <button id="create-color-button" class="button action"><img src="assets/images/plus.svg">Create
+                    </button>
+                </div>
+            </form>
+            <hr>
+            <form id="city-form" class="col">
+                <div class="input-section row center">
+                    <label for="city-input">City:</label>
+                    <input type="text" id="city-input" name="hex" value="Mixing">
+                    <button id="apply-city-button">Apply</button>
+                </div>
+                <div id="weather-info">
+                </div>
+            </form>
+            <hr>
+            <div class="col trash-section">
+                <p>Trash</p>
+                <div id="trashbin" class="trashbin container"></div>
+                <button id="trashbin-empty-button" class="button danger">Empty</button>
+            </div>
+        </div>
+        <div class="output">
+            <div class="output-section">
+                <p>Output</p>
+                <div id="main-color-container" class="container color-container border"></div>
+            </div>
+            <hr>
+            <div class="pot-section">
+                <p>Pots</p>
+                <button id="create-pot-button"><img src="assets/images/plus.svg">Create pot</button>
+                <div class="container pot-container"></div>
+            </div>
+        </div>
+        <div class="tab-container">
+            <div class="tab-selection">
+
+            </div>
+            <div class="tab-content"></div>
+        </div>
+
+        <div class="mixing">
+            <div class="test-section">
+                <div class="input-section">
+                    <label for="test-grid-size">Grid size:</label>
+                    <input type="number" id="test-grid-size" name="test-grid-size" min="1" max="6" step="1"
+                           value="3"
+                           required>
+                </div>
+                <div class="test-grid-container"></div>
+            </div>
+            <hr>
+            <div class="mixer-section">
+                <div class="row">
+                    <p>Mixing</p>
+                    <button class="mixer-tab-button">Hall 1</button>
+                    <button class="mixer-tab-button">Hall 2</button>
+                </div>
+                <button id="create-mixer-button"><img src="assets/images/plus.svg">Create mixer</button>
+                <div id="mixer-hall" class="mixer-container container"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+</main>
+</body>
+</html>
